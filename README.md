@@ -1,6 +1,8 @@
 # real_estate
 
-A new Flutter project.
+A new Flutter project to easy find agood home.
+
+Statemanagment: Getx ^_^
 
 Login page: 
 ![1](https://user-images.githubusercontent.com/60394243/147784001-3a50580d-9c4b-4252-8627-b376f0adcd1d.png)
