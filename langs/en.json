@@ -1,0 +1,22 @@
+{
+    "Settings" : "Settings",
+    "Exit" : "Exit",
+    "Email" : "Email",
+    "pmail":"please enter your email",
+    "Password":"Password",
+    "pPassword":"please enter your password",
+    "SignIn":"Sign In",
+    "NewUser":"New User ? Signup Please",
+    "SignUp":"Sign UP",
+    "Name":"Name",
+    "pName":"please enter your name",
+    "eEmail":"Enter Valid Email",
+    "nMatch":"Not Match",
+    "Register":"Register",
+    "cEmail":"Confirm Email",
+    "cPassword":"Confirm Password",
+    "logout" : "logout"
+
+
+
+}
