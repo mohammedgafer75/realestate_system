@@ -6,7 +6,6 @@ import 'package:path/path.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:real_estate/Screens/nav.dart';
 import 'package:real_estate/Screens/signin.dart';
 import 'package:real_estate/Screens/homepage.dart';
 import 'package:get/get.dart';
@@ -24,11 +23,7 @@ class AuthController extends GetxController {
       number;
 
   bool ob = false;
-  //AuthController.intsance..
-
   static AuthController instance = Get.find();
-
-  //email, password, name...
   late Rx<User?> _user;
   static FirebaseAuth auth = FirebaseAuth.instance;
   late Widget route;
@@ -54,13 +49,14 @@ class AuthController extends GetxController {
     super.onInit();
   }
 
+  // ignore: non_constant_identifier_names
   String? get user_ch => _user.value!.email;
   _initialScreen(User? user) {
     if (user == null) {
       route = SignIn();
       // Get.offAll(() => const SignIn());
     } else {
-      route = Nav();
+      route = HomePage();
       // Get.offAll(() => HomePage());
     }
   }
@@ -192,7 +188,7 @@ class AuthController extends GetxController {
         await auth.signInWithEmailAndPassword(
             email: email.text, password: password.text);
         Get.back();
-        Get.offAll(() => Nav());
+        Get.offAll(() => HomePage());
       } catch (e) {
         Get.back();
         showbar("About Login", "Login message", e.toString(), false);
